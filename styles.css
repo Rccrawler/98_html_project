@@ -1,0 +1,196 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Tahoma", sans-serif;
+}
+
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#boot-screen img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#desktop {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+#desktop-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.desktop-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+}
+
+.desktop-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.window {
+    width: 400px;
+    height: 300px;
+    background: #C0C0C0;
+    border: 2px solid #000;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+    display: none; /* Ocultar por defecto */
+}
+
+.window-title-bar {
+    background: #000080;
+    color: #FFF;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.window-buttons button {
+    background: none;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 2px;
+}
+
+.window-content {
+    padding: 10px;
+    background: #FFF;
+    height: calc(100% - 24px);
+}
+
+.taskbar {
+    background: #C0C0C0;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #000;
+}
+
+.start-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 11;
+}
+
+.start-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.clock {
+    padding: 0 10px;
+}
+
+.taskbar-buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.start-menu {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 200px;
+    background: #C0C0C0;
+    border: 2px solid #000;
+    z-index: 12;
+}
+
+.start-menu-inner {
+    padding: 5px;
+}
+
+.start-menu .menu-item {
+    padding: 5px;
+    background: #C0C0C0;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.start-menu .menu-item:hover {
+    background: #000080;
+    color: #FFF;
+}
+
+.taskbar-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding-left: 5px;
+}
+
+.taskbar-button {
+    background: #C0C0C0;
+    border: 1px solid #000;
+    margin-right: 5px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.taskbar-button:hover {
+    background: #808080;
+}
+
+.context-menu {
+    position: absolute;
+    display: none;
+    background: #C0C0C0;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.context-menu-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.context-menu-item:hover {
+    background: #000080;
+    color: white;
+}

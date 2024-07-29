@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>98_html_project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="boot-screen">
+        <img src="imajenes.png" alt="Boot Screen">
+    </div>
+    <div id="desktop">
+        <img src="imajenes.png" id="desktop-background" alt="Desktop Background">
+        
+        <div class="desktop-icon" id="my-computer-icon" data-target="my-computer-window">
+            <img src="imajenes.png" alt="My Computer">
+            <span>My Computer</span>
+        </div>
+
+        <div class="desktop-icon" id="recycle-bin-icon" data-target="recycle-bin-window">
+            <img src="recycle_bin_full_cool-0.png" alt="Recycle Bin">
+            <span>Recycle Bin</span>
+        </div>
+
+        <div class="window" id="my-computer-window">
+            <div class="window-title-bar">
+                <span>My Computer</span>
+                <div class="window-buttons">
+                    <button class="minimize">_</button>
+                    <button class="maximize">□</button>
+                    <button class="close">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <!-- Contenido de "Mi PC" -->
+            </div>
+        </div>
+
+        <div class="window" id="recycle-bin-window">
+            <div class="window-title-bar">
+                <span>Recycle Bin</span>
+                <div class="window-buttons">
+                    <button class="minimize">_</button>
+                    <button class="maximize">□</button>
+                    <button class="close">X</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <!-- Contenido de "Papelera de reciclaje" -->
+            </div>
+        </div>
+
+        <div class="taskbar">
+            <div class="start-button">
+                <img src="imajenes/win98_icons/start_button.png" alt="Start">
+            </div>
+            <div id="taskbar-buttons" class="taskbar-buttons">
+                <!-- Botones de la barra de tareas -->
+            </div>
+            <div class="clock">12:00 PM</div>
+        </div>
+
+        <div id="context-menu" class="context-menu">
+            <div class="context-menu-item" data-action="open">Open</div>
+            <div class="context-menu-item" data-action="delete">Delete</div>
+            <div class="context-menu-item" data-action="properties">Properties</div>
+        </div>
+
+        <div class="start-menu" id="start-menu">
+            <div class="start-menu-inner">
+                <div class="menu-item" data-function="programs">Programs</div>
+                <div class="menu-item" data-function="documents">Documents</div>
+                <div class="menu-item" data-function="settings">Settings</div>
+                <div class="menu-item" data-function="find">Find</div>
+                <div class="menu-item" data-function="help">Help</div>
+                <div class="menu-item" data-function="run">Run...</div>
+                <div class="menu-item" data-function="shutdown">Shut Down...</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="startup-sound" src="startup.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
